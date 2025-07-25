@@ -1,0 +1,44 @@
+* {
+    box-sizing:border-box;
+}
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+
+}
+.menu{
+    background-color: gray;
+    padding: 20px;
+    width: 800px;
+    margin: 0 auto;
+}
+.container{
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid gray;
+    background-color: whitesmoke;
+}
+
+input{
+    margin: 20px 10px 20px 0;
+    border-radius: 4px;
+}
+.answer {
+    border: 1px solid gray;
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+footer{
+    width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    background-color: whitesmoke;
+}
