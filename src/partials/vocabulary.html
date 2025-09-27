@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vocabulary</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <load src="/partials/header.html" />
+    <main>
+      <section>
+        <div class="container">
+          <h1>Vocabulary</h1>
+          <div class="wrapper">
+            <div class="top">`
+
+                <select name="typeoflearning" id="typeoflearning">
+                  <option value="1">Заучивание</option>
+                  <option value="2">Чтение</option>
+                  <option value="3">Правописание</option>
+                </select>
+
+              <div class="top-buttons">
+                <a href="">
+                    <svg width="20" height="20" style="fill: black;">
+                      <use href="/img/sprite.svg#icon-settings" ></use>
+                    </svg>
+              </a>
+                <a href="">
+                  <svg width="20" height="20" style="fill: black;">
+                    <use href="/img/sprite.svg#icon-close-cross"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="progress"></div>
+            <div class="test">
+              <div class="russian-word">повторний</div>
+              <div class="answer-title">Віберіть відповідь</div>
+              <ul class="answer-wrapper">
+                <div class="answer" id="answerone">answer 1</div>
+                <div class="answer" id="answertwo">answer 2</div>
+                <div class="answer" id="answerthree">answer 3</div>
+                <div class="answer" id="answerfour">answer 4</div>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <load src="/partials/footer.html" />
+  <script type="module" src="../js/main.js"></script>
+  </body>
+</html>

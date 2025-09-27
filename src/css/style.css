@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+.menu {
+    background-color: gray;
+    padding: 20px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid gray;
+    background-color: whitesmoke;
+}
+
+input {
+    margin: 20px 10px 20px 0;
+    border-radius: 4px;
+}
+
+.answer {
+    border: 1px solid gray;
+    width: 500px;
+    height: 50px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    width: 700px;
+    padding: 20px;
+    margin: 0 auto;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    background-color: whitesmoke;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    display: block;
+}
+
+/* #region Header */
+.menu,
+.navigation {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+}
+
+.top-buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 12 12px;
+}
+
+.top {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12 12px;
+    margin-bottom: 24px;
+}
+
+.test {
+    border: 1px solid #D9DDE8;
+    padding: 24px 32px;
+    border-radius: 20px;
+}
+
+.russian-word {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.answer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.answer {
+    font-size: 16px;
+    color: #2e3856;
+    border: 1px solid #D9DDE8;
+    border-radius: 10px;
+    padding: 16px;
+    min-width: 428px;
+}
+
+/* #endregion */
+
