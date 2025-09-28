@@ -42,24 +42,11 @@ const vocabulary = rows
   });
 
 
-
-// const vocabularyExample = [
-//   {
-//     rus: 'повторний',
-//     en: 'rapid',
-//   },
-//   {
-//       rus: 'повторний',
-//       en: 'rapid',
-//     },
-// ]
-
-
-
 //Generation random number to use in logic
 function generateRandom(max, arr){
   const arrayAnswers = [];
   const arrayNumbers = [];
+  const usedNumbers=[];
   
   let randomNumber;
 
@@ -80,15 +67,16 @@ function generateRandom(max, arr){
   word.textContent = arr[randomNumber][0];
   return randomNumber;
 }
-generateRandom(rows.length, rows);
+generateRandom(rows.length-1, rows);
 
 
 const answersArray =[];
-
+// generate 3 wrong answers and 1 rigth answer
+//
 const markup = rows
   .map(
-    words => `<li>
-                  <a class="answer-link" href="${word.en}">
+    word => `<li>
+                  <a class="answer-link" href="${word.en}"${word.en}
                   </a>
             </li>`
   )
@@ -96,4 +84,4 @@ const markup = rows
 
 // Динамічне створення рощзмітки галереї
 
-answers.insertAdjacentHTML('afterbegin', markup);
+answers.append('afterbegin', markup);
