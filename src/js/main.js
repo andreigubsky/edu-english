@@ -58,24 +58,29 @@ const answersArray =[];
 
 // generate 3 wrong answers and 1 rigth answer
 //
-
-for(let i =0; i<3; i++){
+function threeRandom() {
+  for(let i =0; i<3; i++){
   answersArray.push(generateRandom(rows.length-1, vocabulary));
   console.log("answersArray: "+answersArray[i]);
 }
 console.log(answersArray)
+return answersArray;
+}
 
 
 
-const markup = rows
+const markup = vocabulary
   .map(
-    word => `<li>
-                  <a class="answer-link" href="${word.en}"${word.en}
-                  </a>
+    word => {
+
+              `<li>
+                  <a class="answer-link" href="">${word}</a>
             </li>`
+            }
+            
   )
   .join('');
 
 // Динамічне створення рощзмітки галереї
 
-//answers.append('afterbegin', markup);
+answers.append('afterbegin', markup);
