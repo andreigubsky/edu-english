@@ -19,7 +19,7 @@
 // console.log(playlist)
 // console.log(playObj.rating)
 
-// //не знаем ия ключа свойства обьекта
+// //не знаем имя ключа свойства обьекта
 
 // console.log(playObj[key])
 

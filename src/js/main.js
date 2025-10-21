@@ -1,6 +1,7 @@
-const word = document.querySelector(".russian-word")
-const answers = document.querySelector(".answer-wrapper")
 
+
+const word = document.querySelector(".russian-word");
+const answers = document.querySelector(".answer-wrapper");
 const csvData = `avoid,избегать
 encourage,поощрять
 opinion,мнение
@@ -29,58 +30,54 @@ involve,вовлекать
 `;
 const rows = csvData.split('\n');
 
+//Generate vocabulary array
 const vocabulary = rows.map(row => {
+  console.log({rus: row.split(',')[1], en: row.split(',')[0]})
   return {rus: row.split(',')[1], en: row.split(',')[0]}
   });
 
 
 //Generation random number to use in logic
-function generateRandom(max, arr){
+function generateRandom(min,max){
   const arrayNumbers = [];
-  const usedNumbers=[];
-  
-  let randomNumber;
-
-    for(let i=0; i<3; i++){
-      randomNumber = Math.floor(Math.random()*(max-0+1)+0);
-      if(arrayNumbers.includes(randomNumber)){
-        continue;
-      }else{
-        arrayNumbers.push(randomNumber);
-      }
-    }    
-  return randomNumber;
+  for(let i = min; i <=max; i++){
+    arrayNumbers.push(i)
+  }
+    for(let i=arrayNumbers.length-1; i>0; i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [arrayNumbers[i], arrayNumbers[j]] = [arrayNumbers[j], arrayNumbers[i]]
+    } 
+    //log(arrayNumbers)
+   
+  return arrayNumbers;
 }
-//generateRandom(rows.length-1, vocabulary);
 
-word.textContent = vocabulary[generateRandom(rows.length-1, vocabulary)].rus;
-const answersArray =[];
+const randomNumber = generateRandom(0,26);
+console.log(randomNumber)
 
-// generate 3 wrong answers and 1 rigth answer
-//
-function threeRandom() {
-  for(let i =0; i<3; i++){
-  answersArray.push(generateRandom(rows.length-1, vocabulary));
-  console.log("answersArray: "+answersArray[i]);
-}
-console.log(answersArray)
-return answersArray;
+word.textContent = vocabulary[generateRandom(0, 25)[0]].rus;
+
+function log(message){
+  const body = document.querySelector('body')
+  const div = document.createElement("div")
+  div.classList.add('log')
+  div.textContent = message
+  body.appendChild(div)
 }
 
 
-
-const markup = vocabulary
-  .map(
-    word => {
-
-              `<li>
-                  <a class="answer-link" href="">${word}</a>
-            </li>`
-            }
+// const markup = vocabulary
+//   .map(
+//     word => {
+//       console.log(word)
+//             //   `<li>
+//             //       <a class="answer-link" href="">${word}</a>
+//             // </li>`
+//             }
             
-  )
-  .join('');
+//   )
+//   .join('');
 
-// Динамічне створення рощзмітки галереї
+// // Динамічне створення розмітки галереї
 
-answers.append('afterbegin', markup);
+// answers.append( markup);
