@@ -32,7 +32,6 @@ const rows = csvData.split('\n');
 
 //Generate vocabulary array
 const vocabulary = rows.map(row => {
-  console.log({rus: row.split(',')[1], en: row.split(',')[0]})
   return {rus: row.split(',')[1], en: row.split(',')[0]}
   });
 
@@ -51,33 +50,25 @@ function generateRandom(min,max){
    
   return arrayNumbers;
 }
+const usedWords = [];
+const randomArray = generateRandom(0, 25);
+console.log(randomArray);
 
-const randomNumber = generateRandom(0,26);
-console.log(randomNumber)
+word.textContent = vocabulary[randomArray[0]].rus;
+const answer = document.querySelector('.answer-title')
+answer.textContent = vocabulary[randomArray[0]].en;
 
-word.textContent = vocabulary[generateRandom(0, 25)[0]].rus;
+console.log(vocabulary)
+const markup = vocabulary
+  .map(
+    word => {
 
-function log(message){
-  const body = document.querySelector('body')
-  const div = document.createElement("div")
-  div.classList.add('log')
-  div.textContent = message
-  body.appendChild(div)
-}
-
-
-// const markup = vocabulary
-//   .map(
-//     word => {
-//       console.log(word)
-//             //   `<li>
-//             //       <a class="answer-link" href="">${word}</a>
-//             // </li>`
-//             }
+              return `<li>
+                  <a class="answer-link" href="">${word.en}</a>
+            </li>`;
+            }
             
-//   )
-//   .join('');
+  )
+  .join('');
 
-// // Динамічне створення розмітки галереї
-
-// answers.append( markup);
+answers.insertAdjacentHTML('beforeend',markup);
