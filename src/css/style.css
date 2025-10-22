@@ -91,7 +91,7 @@ a {
 }
 
 .russian-word {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 24px;
 }
 
@@ -100,18 +100,40 @@ a {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
+    column-gap: 50px;
 }
 
 .answer {
-    font-size: 16px;
+    font-size: 24px;
     color: #2e3856;
     border: 1px solid #D9DDE8;
     border-radius: 10px;
     padding: 16px;
     min-width: 428px;
 }
-
+.answer-radio{
+    
+    list-style-type: none;
+    font-size: 24px;
+    cursor: pointer;
+      appearance: none;
+  background: none;
+  width: 18px; /* Задайте нужные вам размеры */
+  height: 18px;
+  border: none; /* Уберите стандартную обводку */
+}
 /* #endregion */
+
+.check-btn{
+    border: 1px solid grey;
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-appearance: none;
+
+}
 .log{
     border: 1px dashed tomato;
     width: 700px;
